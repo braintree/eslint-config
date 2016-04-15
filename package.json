@@ -13,7 +13,7 @@
     "url": "https://github.com/braintree/eslint-config.git"
   },
   "peerDependencies": {
-    "eslint": "2.7.0"
+    "eslint": "^2.7.0"
   },
   "devDependencies": {
     "eslint": "2.7.0",
