@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-braintree",
+  "version": "1.0.0",
+  "description": "Braintree's ESLint configuration",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && mocha test"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/braintree/eslint-config.git"
+  },
+  "peerDependencies": {
+    "eslint": "2.7.0"
+  },
+  "devDependencies": {
+    "eslint": "2.7.0",
+    "mocha": "2.4.5"
+  }
+}
