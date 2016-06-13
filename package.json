@@ -1,16 +1,17 @@
 {
-  "name": "eslint-config-braintree",
+  "name": "user-platform-eslint-config",
   "version": "1.0.1",
-  "description": "Braintree's ESLint configuration",
+  "description": "Conde Nast User Platform ESLint configuration",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint && mocha test"
+    "test": "npm run lint && mocha test",
+    "start": "node server.js"
   },
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/braintree/eslint-config.git"
+    "url": "git@github.com:CondeNast/user-platform-eslint-config.git"
   },
   "peerDependencies": {
     "eslint": "^2.7.0"
@@ -18,5 +19,17 @@
   "devDependencies": {
     "eslint": "2.7.0",
     "mocha": "2.4.5"
-  }
+  },
+  "bugs": {
+    "url": "git@github.com:CondeNast/user-platform-eslint-config.git/issues"
+  },
+  "homepage": "git@github.com:CondeNast/user-platform-eslint-config.git#readme",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "style",
+    "eslint"
+  ],
+  "author": ""
 }
