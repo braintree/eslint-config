@@ -1,5 +1,7 @@
-eslint-config-braintree
+User Platfrom JavaScript Style Guide
 ===
+
+Environment-centric JavasScript style guide from [Braintree](https://github.com/braintree/eslint-config)
 
 Shared linting configuration for braintree js projects.
 
