@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  'extends': '.',
+  'extends': 'braintree',
   env: {
     node: true
   }
