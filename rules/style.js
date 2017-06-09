@@ -5,7 +5,9 @@ module.exports = {
     'array-bracket-spacing': [2, 'never'],
     'block-spacing': [2, 'always'],
     'brace-style': [2, '1tbs', {allowSingleLine: true}],
-    camelcase: 2,
+    camelcase: [2, {
+      properties: 'never'
+    }],
     'comma-spacing': [2, {before: false, after: true}],
     'comma-style': [2, 'last'],
     'computed-property-spacing': [2, 'never'],
@@ -18,16 +20,32 @@ module.exports = {
     indent: [2, 2, {SwitchCase: 1}],
     'key-spacing': [2, {beforeColon: false, afterColon: true}],
     'keyword-spacing': [2],
-    'lines-around-comment': 0,
     'linebreak-style': [2, 'unix'],
     'max-nested-callbacks': 0,
     'new-cap': [2, {newIsCap: true, capIsNew: true}],
     'new-parens': 2,
+    'max-len': [2, {
+      code: 140,
+      ignoreComments: true,
+      ignoreStrings: true,
+      ignoreUrls: true
+    }],
+    'newline-before-return': 2,
     'newline-after-var': [2, 'always'],
     'no-array-constructor': 2,
     'no-continue': 0,
     'no-inline-comments': 0,
     'no-lonely-if': 2,
+    'no-mixed-operators': [2, {
+      groups: [
+        ['+', '-', '*', '/', '%', '**'],
+        ['&', '|', '^', '~', '<<', '>>', '>>>'],
+        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+        ['&&', '||'],
+        ['in', 'instanceof']
+      ],
+      allowSamePrecedence: false
+    }],
     'no-mixed-spaces-and-tabs': 2,
     'no-multiple-empty-lines': [2, {max: 1}],
     'no-nested-ternary': 2,
@@ -38,8 +56,12 @@ module.exports = {
     'no-ternary': 0,
     'no-trailing-spaces': 2,
     'no-underscore-dangle': 0,
-    'no-unneeded-ternary': 2,
+    'no-unneeded-ternary': [2, {defaultAssignment: false}],
+    'no-whitespace-before-property': 2,
     'object-curly-spacing': [2, 'never'],
+    'object-property-newline': [2, {
+      allowMultiplePropertiesPerLine: true
+    }],
     'one-var': [2, {uninitialized: 'always', initialized: 'never'}],
     'operator-assignment': [2, 'always'],
     'operator-linebreak': [2, 'after'],
@@ -54,7 +76,9 @@ module.exports = {
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 2,
     'space-unary-ops': [2, {words: true, nonwords: false}],
-    'spaced-comment': [2, 'always'],
+    'spaced-comment': [2, 'always', {
+      exceptions: ['-', '+']
+    }],
     'wrap-regex': 0
   }
 };
