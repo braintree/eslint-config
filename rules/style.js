@@ -20,17 +20,14 @@ module.exports = {
     indent: [2, 2, {SwitchCase: 1}],
     'key-spacing': [2, {beforeColon: false, afterColon: true}],
     'keyword-spacing': [2],
-    'lines-around-comment': [2, {
-      allowArrayStart: true,
-      allowBlockStart: true,
-      allowObjectStart: true
-    }],
     'linebreak-style': [2, 'unix'],
     'max-nested-callbacks': 0,
     'new-cap': [2, {newIsCap: true, capIsNew: true}],
     'new-parens': 2,
     'max-len': [2, {
       code: 140,
+      ignoreComments: true,
+      ignoreStrings: true,
       ignoreUrls: true
     }],
     'newline-before-return': 2,
