@@ -7,7 +7,7 @@ module.exports = {
     complexity: 1,
     'consistent-return': 2,
     curly: [2, 'all'],
-    'default-case': [2, { commentPattern: '^no default$' }],
+    'default-case': [2, {commentPattern: '^no default$'}],
     'dot-notation': [2, {allowKeywords: true}],
     'dot-location': [2, 'property'],
     eqeqeq: [2, 'allow-null'],
@@ -26,7 +26,7 @@ module.exports = {
     'no-implicit-coercion': [2, {
       string: true,
       number: true,
-      boolean: true
+      'boolean': true
     }],
     'no-implied-eval': 2,
     'no-invalid-this': 2,
@@ -42,7 +42,7 @@ module.exports = {
     'no-octal-escape': 2,
     'no-octal': 2,
     'no-param-reassign': [1, {
-      'props': false
+      props: false
     }],
     'no-process-env': 0,
     'no-proto': 2,

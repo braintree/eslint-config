@@ -5,11 +5,11 @@ module.exports = {
     'require-jsdoc': 2,
     'valid-jsdoc': [2, {
       prefer: {
-        return: 'returns'
+        'return': 'returns'
       },
-      requireReturn: false
+      requireReturn: false,
       requireParamDescription: true,
       requireReturnDescription: true
-    }
+    }]
   }
 };
