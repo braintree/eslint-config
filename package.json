@@ -13,10 +13,10 @@
     "url": "https://github.com/braintree/eslint-config.git"
   },
   "peerDependencies": {
-    "eslint": "^4.8.0"
+    "eslint": "^4.10.0"
   },
   "devDependencies": {
-    "eslint": "^4.8.0",
+    "eslint": "^4.10.0",
     "mocha": "3.0.0"
   }
 }
