@@ -46,6 +46,27 @@ extends:
 
 You can specify a `.eslintrc` for a subdirectory to change the rules that are enforced. For instance, in a node project you could extend from `eslint-config-braintree/server` at the top-level, and `eslint-braintree-config/client` at the `public/.eslintrc` level.
 
+See [Configuration File Formats](https://eslint.org/docs/user-guide/configuring#configuration-file-formats) for information on all supported `.eslintrc` file formats.
+
 To override rules, add the new config under `rules` in your rc file. Be sure to properly override any options set by the parent. See [Extending Configuration Files](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for details.
 
-See [Configuration File Formats](https://eslint.org/docs/user-guide/configuring#configuration-file-formats) for information on all supported `.eslintrc` file formats.
+For exmaple, to change the `no-extra-parens` rule to warn instead of error:
+
+```yaml
+___
+extends: braintree/server
+rules:
+  no-extra-parens: 1
+```
+
+In another example, to allow end of line comments, you'd override the `'no-multi-spaces': [2, {"ignoreEOLComments": true}]` rule options:
+
+```yaml
+___
+extends: braintree/server
+rules:
+  no-multi-spaces:
+    - 2
+    - ignoreEOLComments: false
+```
+
