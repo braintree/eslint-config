@@ -53,7 +53,7 @@ To override rules, add the new config under `rules` in your rc file. Be sure to 
 For exmaple, to change the `no-extra-parens` rule to warn instead of error:
 
 ```yaml
-___
+---
 extends: braintree/server
 rules:
   no-extra-parens: 1
@@ -62,7 +62,7 @@ rules:
 In another example, to allow end of line comments, you'd override the `'no-multi-spaces': [2, {"ignoreEOLComments": true}]` rule options:
 
 ```yaml
-___
+---
 extends: braintree/server
 rules:
   no-multi-spaces:
