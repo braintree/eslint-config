@@ -16,30 +16,24 @@ Install the eslint config
 npm i -D eslint-config-braintree
 ```
 
-In your project's .eslintrc:
+In your project's `.eslintrc.*` (below is yaml):
 
 __default__
 ```yaml
 ---
 extends: braintree
-rules:
-  locally-overriden-rule: 1
 ```
 
 __browserify__
 ```yaml
 ---
 extends: braintree/client
-rules:
-  locally-overriden-rule: 1
 ```
 
 __node__
 ```yaml
 ---
 extends: braintree/server
-rules:
-  locally-overriden-rule: 1
 ```
 
 __browserify + es6__
@@ -48,8 +42,31 @@ __browserify + es6__
 extends:
   - braintree/client
   - braintree/es6
-rules:
-  locally-overriden-rule: 1
 ```
 
 You can specify a `.eslintrc` for a subdirectory to change the rules that are enforced. For instance, in a node project you could extend from `eslint-config-braintree/server` at the top-level, and `eslint-braintree-config/client` at the `public/.eslintrc` level.
+
+See [Configuration File Formats](https://eslint.org/docs/user-guide/configuring#configuration-file-formats) for information on all supported `.eslintrc` file formats.
+
+To override rules, add the new config under `rules` in your rc file. Be sure to properly override any options set by the parent. See [Extending Configuration Files](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for details.
+
+For example, to change the `no-new-object` rule to warn instead of error:
+
+```yaml
+---
+extends: braintree/server
+rules:
+  no-new-object: 1
+```
+
+In another example, to allow end of line comments, you'd override the `'no-multi-spaces': [2, {"ignoreEOLComments": true}]` rule options:
+
+```yaml
+---
+extends: braintree/server
+rules:
+  no-multi-spaces:
+    - 2
+    - ignoreEOLComments: false
+```
+

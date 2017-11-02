@@ -15,7 +15,7 @@ module.exports = {
     'no-empty': 2,
     'no-ex-assign': 2,
     'no-extra-boolean-cast': 2,
-    'no-extra-parens': [2, 'all'],
+    'no-extra-parens': [2, 'all', {nestedBinaryExpressions: false}],
     'no-extra-semi': 2,
     'no-func-assign': 2,
     'no-inner-declarations': [2, 'both'],
@@ -27,7 +27,6 @@ module.exports = {
     'no-sparse-arrays': 2,
     'no-unreachable': 2,
     'use-isnan': 2,
-    'valid-jsdoc': 2,
     'valid-typeof': 2,
     'no-unexpected-multiline': 2
   }
