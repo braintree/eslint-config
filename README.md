@@ -50,13 +50,13 @@ See [Configuration File Formats](https://eslint.org/docs/user-guide/configuring#
 
 To override rules, add the new config under `rules` in your rc file. Be sure to properly override any options set by the parent. See [Extending Configuration Files](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for details.
 
-For example, to change the `no-extra-parens` rule to warn instead of error:
+For example, to change the `no-new-object` rule to warn instead of error:
 
 ```yaml
 ---
 extends: braintree/server
 rules:
-  no-extra-parens: 1
+  no-new-object: 1
 ```
 
 In another example, to allow end of line comments, you'd override the `'no-multi-spaces': [2, {"ignoreEOLComments": true}]` rule options:
