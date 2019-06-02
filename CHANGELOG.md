@@ -1,5 +1,7 @@
 CHANGELOG
 =========
+## 3.0.0
+* Update peer dependencies to require eslint@5
 
 ## 2.0.0
 
