@@ -5,13 +5,14 @@ Shared linting configuration for braintree js projects.
 - [index.js](./index.js): shared configuration
 - [client.js](./client.js): client side configuration
 - [server.js](./server.js): server side configuration
+- [jsdoc.js](./jsdoc.js): jsdoc configuration
 
 ## Consuming
 
 Install the eslint config
 
 ```bash
-npm i -D eslint-config-braintree
+npm i --save-dev eslint-config-braintree
 ```
 
 In your project's `.eslintrc.*`:
@@ -77,8 +78,8 @@ __browserify + es6__
 ```json
 {
   "extends": [
-  "braintree/client",
-  "braintree/es6"
+    "braintree/client",
+    "braintree/es6"
   ]
 }
 ```
