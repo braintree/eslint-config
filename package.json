@@ -13,11 +13,11 @@
     "url": "git+https://github.com/braintree/eslint-config.git"
   },
   "peerDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^6.2.2"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "mocha": "^6.1.4"
+    "eslint": "^6.2.2",
+    "mocha": "^6.2.0"
   },
   "bugs": {
     "url": "https://github.com/braintree/eslint-config/issues"

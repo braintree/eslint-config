@@ -1,5 +1,9 @@
 CHANGELOG
 =========
+## unreleased
+_Breaking Changes_
+* Update peer dependencies to require eslint@6
+
 ## 3.0.1
 * Readme updates
 
