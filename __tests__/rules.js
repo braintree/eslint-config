@@ -1,14 +1,12 @@
-'use strict';
+const bestPractices = require('../rules/best-practices');
+const errors = require('../rules/errors');
+const style = require('../rules/style');
+const strict = require('../rules/strict');
+const variables = require('../rules/variables');
 
-var bestPractices = require('../rules/best-practices');
-var errors = require('../rules/errors');
-var style = require('../rules/style');
-var strict = require('../rules/strict');
-var variables = require('../rules/variables');
-
-describe('Rules', function () {
-  it('does not duplicate rules between rules files', function () {
-    var files = {
+describe('Rules', () => {
+  test('does not duplicate rules between rules files', () => {
+    const files = {
       'best-practices.js': bestPractices,
       'errors.js': errors,
       'style.js': style,
@@ -16,7 +14,7 @@ describe('Rules', function () {
       'variables.js': variables
     };
 
-    var allRules = {};
+    const allRules = {};
 
     Object.keys(files).forEach(function (file) {
       Object.keys(files[file].rules).forEach(function (ruleName) {

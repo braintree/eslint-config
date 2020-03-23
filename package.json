@@ -4,7 +4,8 @@
   "description": "Braintree's ESLint configuration",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint && mocha test"
+    "posttest": "npm run lint",
+    "test": "jest"
   },
   "main": "index.js",
   "license": "MIT",
@@ -16,8 +17,8 @@
     "eslint": "^6.2.2"
   },
   "devDependencies": {
-    "eslint": "^6.2.2",
-    "mocha": "^6.2.0"
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0"
   },
   "bugs": {
     "url": "https://github.com/braintree/eslint-config/issues"
