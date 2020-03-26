@@ -2,7 +2,7 @@ CHANGELOG
 =========
 ## unreleased
 _Breaking Changes_
-* Add jest config to __tests_ directories automatically
+* Add jest config to `__tests__` directories automatically
 
 ## 4.0.0
 _Breaking Changes_
