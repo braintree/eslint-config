@@ -2,6 +2,10 @@ CHANGELOG
 =========
 ## unreleased
 _Breaking Changes_
+* Add jest config to `__tests__` directories automatically
+
+## 4.0.0
+_Breaking Changes_
 * Update peer dependencies to require eslint@6
 
 ## 3.0.1

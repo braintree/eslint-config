@@ -8,5 +8,9 @@ module.exports = {
     './rules/style',
     './rules/variables'
   ].map(require.resolve),
-  rules: { }
+  rules: { },
+  overrides: [{
+    files: ['**/__tests__/**/*.js'],
+    'extends': './jest'
+  }]
 };
