@@ -11,6 +11,6 @@ module.exports = {
   rules: { },
   overrides: [{
     files: ['**/__tests__/**/*.js'],
-    extends: './jest'
+    'extends': './jest'
   }]
 };
