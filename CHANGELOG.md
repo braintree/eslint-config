@@ -3,6 +3,7 @@ CHANGELOG
 ## unreleased
 _Breaking Changes_
 * Add jest config to `__tests__` directories automatically
+* `object-curly-spacing` changed from `[2, 'never']` to `[2, 'always']`
 
 ## 4.0.0
 _Breaking Changes_
