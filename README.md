@@ -129,3 +129,7 @@ rules:
   }
 }
 ```
+
+## Test Files
+
+By default, any files in a `__tests__` folder, whether at the top level of the directory or within another directory will be configured to be used in the [Jest](https://jestjs.io/) and ES2020 environments.
