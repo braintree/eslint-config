@@ -1,4 +1,3 @@
-
 export = {
   'extends': [
     './rules/best-practices',
