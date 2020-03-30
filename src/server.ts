@@ -1,5 +1,5 @@
 export = {
-  'extends': './index.ts',
+  'extends': './',
   env: {
     node: true
   },
