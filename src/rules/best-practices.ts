@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export = {
   rules: {
     'accessor-pairs': 2,
     'block-scoped-var': 2,

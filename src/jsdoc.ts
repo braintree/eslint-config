@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export = {
   rules: {
     'require-jsdoc': 2,
     'valid-jsdoc': [2, {

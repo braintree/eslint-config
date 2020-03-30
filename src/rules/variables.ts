@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export = {
   rules: {
     'init-declarations': 0,
     'no-catch-shadow': 2,

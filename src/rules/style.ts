@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export = {
   rules: {
     'array-bracket-spacing': [2, 'never'],
     'block-spacing': [2, 'always'],

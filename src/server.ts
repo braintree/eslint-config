@@ -1,7 +1,5 @@
-'use strict';
-
-module.exports = {
-  'extends': './',
+export = {
+  'extends': './index.ts',
   env: {
     node: true
   },

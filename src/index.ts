@@ -1,16 +1,16 @@
-'use strict';
 
-module.exports = {
+export = {
   'extends': [
     './rules/best-practices',
     './rules/errors',
     './rules/strict',
     './rules/style',
-    './rules/variables'
-  ].map(require.resolve),
+    './rules/variables',
+    'plugin:@typescript-eslint/recommended'
+  ],
   rules: { },
   overrides: [{
-    files: ['**/__tests__/**/*.js'],
+    files: ['**/__tests__/**/*.ts'],
     'extends': './jest'
   }]
 };

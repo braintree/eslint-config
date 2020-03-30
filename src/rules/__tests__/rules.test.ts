@@ -1,8 +1,8 @@
-const bestPractices = require('../best-practices');
-const errors = require('../errors');
-const style = require('../style');
-const strict = require('../strict');
-const variables = require('../variables');
+import bestPractices = require('../best-practices');
+import errors = require('../errors');
+import style = require('../style');
+import strict = require('../strict');
+import variables = require('../variables');
 
 describe('Rules', () => {
   test('does not duplicate rules between rules files', () => {

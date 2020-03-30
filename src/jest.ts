@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export = {
   env: {
     jest: true,
     es2020: true

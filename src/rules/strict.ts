@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export = {
   rules: {
     strict: [2, 'global']
   }
