@@ -15,7 +15,10 @@ export = {
     },
     {
       files: ['webpack.config.js'],
-      extends: './node'
+      extends: './node',
+      rules: {
+        '@typescript-eslint/no-var-requires': 0
+      }
     }
   ]
 };
