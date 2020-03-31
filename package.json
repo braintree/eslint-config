@@ -11,7 +11,7 @@
     "build": "tsc",
     "prelint": "npm run build",
     "prepare": "npm run build",
-    "lint": "eslint .",
+    "lint": "eslint --ext .js,.ts .",
     "posttest": "npm run lint",
     "test": "jest"
   },
