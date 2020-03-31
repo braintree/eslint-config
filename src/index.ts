@@ -4,6 +4,7 @@ export = {
     './rules/errors',
     './rules/strict',
     './rules/variables',
+    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended'
   ],
   rules: {},
