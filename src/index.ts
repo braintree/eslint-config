@@ -1,5 +1,5 @@
 export = {
-  'extends': [
+  extends: [
     './rules/best-practices',
     './rules/errors',
     './rules/strict',
@@ -7,9 +7,11 @@ export = {
     './rules/variables',
     'plugin:@typescript-eslint/recommended'
   ],
-  rules: { },
-  overrides: [{
-    files: ['**/__tests__/**/*.ts'],
-    'extends': './jest'
-  }]
+  rules: {},
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.ts'],
+      extends: './jest'
+    }
+  ]
 };

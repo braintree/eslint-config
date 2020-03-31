@@ -21,7 +21,7 @@ export = {
     'no-extra-bind': 2,
     'no-fallthrough': 2,
     'no-floating-decimal': 2,
-    'no-implicit-coercion': [2, { string: true, number: true, 'boolean': true }],
+    'no-implicit-coercion': [2, { string: true, number: true, boolean: true }],
     'no-implied-eval': 2,
     'no-invalid-this': 2,
     'no-iterator': 2,
@@ -48,7 +48,10 @@ export = {
     'no-useless-call': 2,
     'no-useless-concat': 2,
     'no-void': 2,
-    'no-warning-comments': [1, { terms: ['todo', 'fixme'], location: 'anywhere' }],
+    'no-warning-comments': [
+      1,
+      { terms: ['todo', 'fixme'], location: 'anywhere' }
+    ],
     'no-with': 2,
     radix: 2,
     'vars-on-top': 2,

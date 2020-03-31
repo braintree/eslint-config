@@ -7,6 +7,7 @@
     "*.js"
   ],
   "scripts": {
+    "prebuild": "prettier --write .",
     "build": "tsc",
     "prelint": "npm run build",
     "prepare": "npm run build",
@@ -27,6 +28,7 @@
     "@types/jest": "^25.1.4",
     "eslint": "^6.8.0",
     "jest": "^25.1.0",
+    "prettier": "^2.0.2",
     "ts-jest": "^25.3.0",
     "typescript": "^3.8.3"
   },
@@ -35,6 +37,7 @@
   },
   "homepage": "https://github.com/braintree/eslint-config#readme",
   "dependencies": {
+    "eslint-plugin-prettier": "^3.1.2",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0"
   },

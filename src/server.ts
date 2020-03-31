@@ -1,5 +1,5 @@
 export = {
-  'extends': './',
+  extends: './',
   env: {
     node: true
   },

@@ -19,7 +19,16 @@ describe('Rules', () => {
     Object.keys(files).forEach(function (file) {
       Object.keys(files[file].rules).forEach(function (ruleName) {
         if (ruleName in allRules) {
-          throw new Error('Found ' + ruleName + ' in ' + file + ', but ' + ruleName + ' already exists in ' + allRules[ruleName]);
+          throw new Error(
+            'Found ' +
+              ruleName +
+              ' in ' +
+              file +
+              ', but ' +
+              ruleName +
+              ' already exists in ' +
+              allRules[ruleName]
+          );
         }
 
         allRules[ruleName] = file;

@@ -21,28 +21,34 @@ export = {
     'max-nested-callbacks': 0,
     'new-cap': 2,
     'new-parens': 2,
-    'max-len': [2, {
-      code: 140,
-      ignoreComments: true,
-      ignoreStrings: true,
-      ignoreUrls: true
-    }],
+    'max-len': [
+      2,
+      {
+        code: 140,
+        ignoreComments: true,
+        ignoreStrings: true,
+        ignoreUrls: true
+      }
+    ],
     'newline-before-return': 2,
     'newline-after-var': [2, 'always'],
     'no-array-constructor': 2,
     'no-continue': 0,
     'no-inline-comments': 0,
     'no-lonely-if': 2,
-    'no-mixed-operators': [2, {
-      groups: [
-        ['+', '-', '*', '/', '%', '**'],
-        ['&', '|', '^', '~', '<<', '>>', '>>>'],
-        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-        ['&&', '||'],
-        ['in', 'instanceof']
-      ],
-      allowSamePrecedence: false
-    }],
+    'no-mixed-operators': [
+      2,
+      {
+        groups: [
+          ['+', '-', '*', '/', '%', '**'],
+          ['&', '|', '^', '~', '<<', '>>', '>>>'],
+          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+          ['&&', '||'],
+          ['in', 'instanceof']
+        ],
+        allowSamePrecedence: false
+      }
+    ],
     'no-mixed-spaces-and-tabs': 2,
     'no-multiple-empty-lines': [2, { max: 1 }],
     'no-nested-ternary': 2,
@@ -56,9 +62,12 @@ export = {
     'no-unneeded-ternary': 2,
     'no-whitespace-before-property': 2,
     'object-curly-spacing': [2, 'always'],
-    'object-property-newline': [2, {
-      allowMultiplePropertiesPerLine: true
-    }],
+    'object-property-newline': [
+      2,
+      {
+        allowMultiplePropertiesPerLine: true
+      }
+    ],
     'one-var': [2, { uninitialized: 'always', initialized: 'never' }],
     'operator-assignment': [2, 'always'],
     'operator-linebreak': [2, 'after'],
@@ -73,9 +82,13 @@ export = {
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 2,
     'space-unary-ops': [2, { words: true, nonwords: false }],
-    'spaced-comment': [2, 'always', {
-      exceptions: ['-', '+']
-    }],
+    'spaced-comment': [
+      2,
+      'always',
+      {
+        exceptions: ['-', '+']
+      }
+    ],
     'wrap-regex': 0
   }
 };

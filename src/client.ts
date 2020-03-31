@@ -1,5 +1,5 @@
 export = {
-  'extends': './',
+  extends: './',
   env: {
     browser: true,
     commonjs: true
@@ -7,6 +7,6 @@ export = {
   globals: {
     global: false,
     console: false,
-    'debugger': false
+    debugger: false
   }
 };
