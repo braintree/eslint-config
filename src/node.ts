@@ -6,4 +6,3 @@ export = {
     'no-path-concat': 2
   }
 };
-
