@@ -12,6 +12,10 @@ export = {
     {
       files: ['**/__tests__/**/*.ts'],
       extends: './jest'
+    },
+    {
+      files: ['webpack.config.js'],
+      extends: './node'
     }
   ]
 };
