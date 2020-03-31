@@ -2,10 +2,14 @@ import bestPractices = require('../best-practices');
 import errors = require('../errors');
 import strict = require('../strict');
 import variables = require('../variables');
+import prettier = require('eslint-plugin-prettier');
+import typescript = require('@typescript-eslint/eslint-plugin');
 
 describe('Rules', () => {
   test('does not duplicate rules between rules files', () => {
     const files = {
+      prettier,
+      typescript,
       'best-practices.js': bestPractices,
       'errors.js': errors,
       'strict.js': strict,
