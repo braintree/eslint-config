@@ -3,7 +3,6 @@ export = {
     './rules/best-practices',
     './rules/errors',
     './rules/strict',
-    './rules/style',
     './rules/variables',
     'plugin:@typescript-eslint/recommended'
   ],

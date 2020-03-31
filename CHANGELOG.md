@@ -7,6 +7,7 @@ _Breaking Changes_
 - Add jest config to `__tests__` directories automatically
 - `object-curly-spacing` changed from `[2, 'never']` to `[2, 'always']`
 - Require eslint@^6.8.0
+- Use prettier for style rules
 
 ## 4.0.0
 
