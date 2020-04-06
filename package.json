@@ -7,10 +7,10 @@
     "*.js"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "prebuild": "prettier --write .",
     "build": "tsc",
     "prelint": "npm run build",
-    "prepare": "npm run build",
     "lint": "eslint --ext .js,.ts .",
     "posttest": "npm run lint",
     "test": "jest"
