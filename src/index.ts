@@ -1,24 +1,24 @@
 export = {
   extends: [
-    './rules/best-practices',
-    './rules/errors',
-    './rules/strict',
-    './rules/variables',
-    'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended'
+    "./rules/best-practices",
+    "./rules/errors",
+    "./rules/strict",
+    "./rules/variables",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
   ],
   rules: {},
   overrides: [
     {
-      files: ['**/__tests__/**/*.ts'],
-      extends: './jest'
+      files: ["**/__tests__/**/*.ts"],
+      extends: "./jest",
     },
     {
-      files: ['webpack.config.js'],
-      extends: './node',
+      files: ["webpack.config.js"],
+      extends: "./node",
       rules: {
-        '@typescript-eslint/no-var-requires': 0
-      }
-    }
-  ]
+        "@typescript-eslint/no-var-requires": 0,
+      },
+    },
+  ],
 };

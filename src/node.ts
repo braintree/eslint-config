@@ -1,8 +1,8 @@
 export = {
   env: {
-    node: true
+    node: true,
   },
   rules: {
-    'no-path-concat': 2
-  }
+    "no-path-concat": 2,
+  },
 };

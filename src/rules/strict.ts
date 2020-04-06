@@ -1,5 +1,5 @@
 export = {
   rules: {
-    strict: [2, 'global']
-  }
+    strict: [2, "global"],
+  },
 };

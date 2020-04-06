@@ -1,12 +1,12 @@
 export = {
-  extends: './',
+  extends: "./",
   env: {
     browser: true,
-    commonjs: true
+    commonjs: true,
   },
   globals: {
     global: false,
     console: false,
-    debugger: false
-  }
+    debugger: false,
+  },
 };

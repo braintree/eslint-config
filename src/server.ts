@@ -1,3 +1,3 @@
 export = {
-  extends: ['./', './node']
+  extends: ["./", "./node"],
 };
