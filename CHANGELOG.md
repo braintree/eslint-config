@@ -1,8 +1,8 @@
-
 # CHANGELOG
 
 # unreleased
-* Add typescript types
+
+- Add typescript types
 
 _Breaking Changes_
 
