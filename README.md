@@ -19,31 +19,30 @@ In your project's `.eslintrc.*`:
 
 ### yaml
 
-__default__ 
+**default**
 
 ```yaml
-
 ---
 extends: braintree
 ```
 
-__browserify__
-```yaml
+**browserify**
 
+```yaml
 ---
 extends: braintree/client
 ```
 
-__node__
-```yaml
+**node**
 
+```yaml
 ---
 extends: braintree/server
 ```
 
-__browserify + es6__
-```yaml
+**browserify + es6**
 
+```yaml
 ---
 extends:
   - braintree/client
@@ -52,7 +51,7 @@ extends:
 
 ### json
 
-__default__ 
+**default**
 
 ```json
 {
@@ -60,27 +59,27 @@ __default__
 }
 ```
 
-__browserify__
+**browserify**
+
 ```json
 {
   "extends": "braintree/client"
 }
 ```
 
-__node__
+**node**
+
 ```json
 {
   "extends": "braintree/server"
 }
 ```
 
-__browserify + es6__
+**browserify + es6**
+
 ```json
 {
-  "extends": [
-    "braintree/client",
-    "braintree/es6"
-  ]
+  "extends": ["braintree/client", "braintree/es6"]
 }
 ```
 
@@ -93,7 +92,6 @@ To override rules, add the new config under `rules` in your rc file. Be sure to 
 For example, to change the `no-new-object` rule to warn instead of error:
 
 ```yaml
-
 ---
 extends: braintree/server
 rules:
@@ -112,7 +110,6 @@ rules:
 In another example, to allow end of line comments, you'd override the `"no-multi-spaces"` rule options:
 
 ```yaml
-
 ---
 extends: braintree/server
 rules:
@@ -125,7 +122,7 @@ rules:
 {
   "extends": "braintree/server",
   "rules": {
-    "no-multi-spaces": [ 2, { "ignoreEOLComments": false } ]
+    "no-multi-spaces": [2, { "ignoreEOLComments": false }]
   }
 }
 ```

@@ -1,5 +1,5 @@
 {
-  "extends": "./index.js",
+  "extends": "./dist/index.js",
   "env": {
     "node": true
   }

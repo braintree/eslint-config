@@ -1,11 +1,1 @@
-'use strict';
-
-module.exports = {
-  'extends': 'braintree',
-  env: {
-    node: true
-  },
-  rules: {
-    'no-path-concat': 2
-  }
-};
+module.exports = require("./dist/server");
