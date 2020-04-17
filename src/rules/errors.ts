@@ -1,6 +1,5 @@
 export = {
   rules: {
-    "comma-dangle": [2, "never"],
     "no-cond-assign": [2, "always"],
     "no-console": 1,
     "no-constant-condition": 2,
@@ -24,6 +23,5 @@ export = {
     "no-unreachable": 2,
     "use-isnan": 2,
     "valid-typeof": 2,
-    "no-unexpected-multiline": 2,
   },
 };
