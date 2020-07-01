@@ -1,6 +1,5 @@
 export = {
   rules: {
-    "init-declarations": 0,
     "no-catch-shadow": 2,
     "no-delete-var": 2,
     "no-label-var": 2,
