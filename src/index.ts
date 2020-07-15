@@ -10,10 +10,7 @@ export = {
   rules: {},
   overrides: [
     {
-      files: [
-        "**/__mocks__/**/*.ts",
-        "**/__tests__/**/*.ts"
-      ],
+      files: ["**/__mocks__/**/*.ts", "**/__tests__/**/*.ts"],
       extends: "./jest",
     },
     {
