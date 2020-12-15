@@ -26,11 +26,11 @@
     "eslint": "^7.3.1"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.14",
+    "@types/jest": "^26.0.19",
     "eslint": "^7.10.0",
     "jest": "^26.4.2",
     "prettier": "^2.1.2",
-    "ts-jest": "^26.4.1",
+    "ts-jest": "^26.4.4",
     "typescript": "^4.0.3"
   },
   "bugs": {
@@ -38,10 +38,10 @@
   },
   "homepage": "https://github.com/braintree/eslint-config#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.3.0",
-    "@typescript-eslint/parser": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
     "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-prettier": "^3.1.4"
+    "eslint-plugin-prettier": "^3.3.0"
   },
   "author": "",
   "jest": {
