@@ -25,8 +25,7 @@ Eslint requires all the plugins that the configu uses to be installed at
 the root of the project as well.
 
 ```bash
-npm i --save-dev @typescript-eslint/eslint-plugin@^5.2.0
-npm i --save-dev eslint-plugin-prettier@^4.0.0
+npm i --save-dev @typescript-eslint/eslint-plugin eslint-plugin-prettier
 ```
 
 In your project's `.eslintrc.*`:
