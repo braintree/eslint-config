@@ -10,6 +10,8 @@ _Breaking Changes_
 - Require eslint@^8.1.0
 - Use prettier for style rules
 - Use typescript for syntax rules
+- Require @typescript-eslint/eslint-plugin@^5.2.0 as a peer dependency
+- Require eslint-plugin-prettier@^4.0.0 as a peer dependency
 
 ## 4.0.0
 
