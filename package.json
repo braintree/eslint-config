@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-braintree",
-  "version": "5.0.0-typescript-prep-rc.19",
+  "version": "6.0.0-typescript-prep-rc.1",
   "description": "Braintree's ESLint configuration",
   "files": [
     "dist/",
