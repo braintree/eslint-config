@@ -7,7 +7,7 @@ export = {
     "./rules/strict",
     "./rules/variables",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
+    "plugin:prettier/recommended",
   ],
   rules: {},
   overrides: [
