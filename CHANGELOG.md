@@ -7,7 +7,7 @@
 _Breaking Changes_
 
 - Add jest config to `__tests__` directories automatically
-- Require eslint@^7.3.1
+- Require eslint@^8.1.0
 - Use prettier for style rules
 - Use typescript for syntax rules
 

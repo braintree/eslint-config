@@ -1,11 +1,13 @@
 export = {
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   extends: [
     "./rules/best-practices",
     "./rules/errors",
     "./rules/strict",
     "./rules/variables",
-    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
+    "prettier",
   ],
   rules: {},
   overrides: [

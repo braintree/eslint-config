@@ -9,10 +9,24 @@ Shared linting configuration for braintree js projects.
 
 ## Consuming
 
+Install eslint@^8
+
+```bash
+npm install eslint@^8
+```
+
 Install the eslint config
 
 ```bash
 npm i --save-dev eslint-config-braintree
+```
+
+Eslint requires all the plugins that the configu uses to be installed at
+the root of the project as well.
+
+```bash
+npm i --save-dev @typescript-eslint/eslint-plugin@^5.2.0
+npm i --save-dev eslint-plugin-prettier@^4.0.0
 ```
 
 In your project's `.eslintrc.*`:
@@ -83,13 +97,23 @@ extends:
 }
 ```
 
-You can specify a `.eslintrc` for a subdirectory to change the rules that are enforced. For instance, in a node project you could extend from `eslint-config-braintree/server` at the top-level, and `eslint-braintree-config/client` at the `public/.eslintrc` level.
+You can specify a `.eslintrc` for a subdirectory to change the rules
+that are enforced. For instance, in a node project you could extend from
+`eslint-config-braintree/server` at the top-level, and
+`eslint-braintree-config/client` at the `public/.eslintrc` level.
 
-See [Configuration File Formats](https://eslint.org/docs/user-guide/configuring#configuration-file-formats) for information on all supported `.eslintrc` file formats.
+See [Configuration File
+Formats](https://eslint.org/docs/user-guide/configuring#configuration-file-formats)
+for information on all supported `.eslintrc` file formats.
 
-To override rules, add the new config under `rules` in your rc file. Be sure to properly override any options set by the parent. See [Extending Configuration Files](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for details.
+To override rules, add the new config under `rules` in your rc file. Be
+sure to properly override any options set by the parent. See [Extending
+Configuration
+Files](https://eslint.org/docs/user-guide/configuring#extending-configuration-files)
+for details.
 
-For example, to change the `no-new-object` rule to warn instead of error:
+For example, to change the `no-new-object` rule to warn instead of
+error:
 
 ```yaml
 ---
@@ -107,7 +131,8 @@ rules:
 }
 ```
 
-In another example, to allow end of line comments, you'd override the `"no-multi-spaces"` rule options:
+In another example, to allow end of line comments, you'd override the
+`"no-multi-spaces"` rule options:
 
 ```yaml
 ---
@@ -129,4 +154,6 @@ rules:
 
 ## Test Files
 
-By default, any files in a `__tests__` folder, whether at the top level of the directory or within another directory will be configured to be used in the [Jest](https://jestjs.io/) and ES2020 environments.
+By default, any files in a `__tests__` folder, whether at the top level
+of the directory or within another directory will be configured to be
+used in the [Jest](https://jestjs.io/) and ES2020 environments.
