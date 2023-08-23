@@ -27,7 +27,7 @@ describe("Rules", () => {
     it.each(rules)("does not duplicate %p", (ruleName) => {
       if (ruleName in allRules) {
         throw new Error(
-          `Found ${ruleName} in ${file}, but ${ruleName} already exists in ${allRules[ruleName]}`
+          `Found ${ruleName} in ${file}, but ${ruleName} already exists in ${allRules[ruleName]}`,
         );
       }
 
