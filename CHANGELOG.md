@@ -3,6 +3,15 @@
 # unreleased
 
 - Add typescript types
+- Dependency Updates:
+  - Node to v18
+- DevDependency Updates
+  - typescript-eslint/eslint-plugin to v6
+  - @typescript-eslint/parser to v6
+  - typescript to v5
+  - eslint-config-prettier to v9
+  - eslint-plugin-prettier to v4
+  - prettier to v3
 
 _Breaking Changes_
 
