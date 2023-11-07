@@ -1,10 +1,8 @@
 # CHANGELOG
 
-# unreleased
+# 5.0.0
 
 - Add typescript types
-- Dependency Updates:
-  - Node to v18
 - DevDependency Updates
   - typescript-eslint/eslint-plugin to v6
   - @typescript-eslint/parser to v6
@@ -15,6 +13,7 @@
 
 _Breaking Changes_
 
+- Update Node to v18
 - Add jest config to `__tests__` directories automatically
 - Require eslint@^8.1.0
 - Use prettier for style rules
