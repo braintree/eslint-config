@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# UNRELEASED
+
+- Updates braces to 3.0.3
+
 # 5.0.0
 
 - Add typescript types
