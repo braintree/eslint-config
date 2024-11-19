@@ -1,10 +1,13 @@
 # CHANGELOG
 
-# UNRELEASED
+## UNRELEASED
 
+- Update (sub-)dependencies
+  - `cross-spawn` to 7.0.6
+  - `semver` to 6.3.1
 - Updates braces to 3.0.3
 
-# 5.0.0
+## 5.0.0
 
 - Add typescript types
 - DevDependency Updates
