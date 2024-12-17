@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## UNRELEASED
+## 5.0.1
 
 - Update (sub-)dependencies
   - `cross-spawn` to 7.0.6
