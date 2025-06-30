@@ -1,12 +1,19 @@
-export = {
-  extends: "./",
-  env: {
-    browser: true,
-    commonjs: true,
+import type { Linter } from "eslint";
+import { browserGlobals, commonjsGlobals, disabledGlobals } from "./globals";
+import baseConfig from "./index";
+
+const config: Linter.Config[] = [
+  ...baseConfig,
+  {
+    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+    languageOptions: {
+      globals: {
+        ...browserGlobals,
+        ...commonjsGlobals,
+        ...disabledGlobals,
+      },
+    },
   },
-  globals: {
-    global: false,
-    console: false,
-    debugger: false,
-  },
-};
+];
+
+export default config;

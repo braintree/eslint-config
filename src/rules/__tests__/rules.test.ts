@@ -1,8 +1,8 @@
-import bestPractices = require("../best-practices");
-import errors = require("../errors");
-import strict = require("../strict");
-import variables = require("../variables");
-import prettier = require("eslint-config-prettier");
+import bestPractices from "../best-practices";
+import errors from "../errors";
+import strict from "../strict";
+import variables from "../variables";
+const prettier = require("eslint-config-prettier");
 // For some reason, there's something wrong with how the typescript
 // package is getting imported, and it's throwing an error to attempt
 // it. Try again later.

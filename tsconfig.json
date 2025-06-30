@@ -2,8 +2,15 @@
   "compilerOptions": {
     "outDir": "./dist",
     "allowJs": true,
-    "target": "es5",
-    "lib": ["es2015"]
+    "target": "es2020",
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "declaration": true
   },
   "include": ["./src/**/*"],
   "exclude": ["**/__tests__/**/*"]

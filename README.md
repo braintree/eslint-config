@@ -9,13 +9,13 @@ Shared linting configuration for braintree js projects.
 
 ## Consuming
 
-Install eslint@^8
+Install eslint@^9
 
 ```bash
-npm install eslint@^8
+npm install eslint@^9
 ```
 
-Install the eslint config
+Install the ESLint config
 
 ```bash
 npm i --save-dev eslint-config-braintree
@@ -28,9 +28,48 @@ the root of the project as well.
 npm i --save-dev @typescript-eslint/eslint-plugin eslint-plugin-prettier
 ```
 
+### ESLint Flat Config (v9+)
+
+In your project's `eslint.config.js`:
+
+**default**
+
+```javascript
+const braintreeConfig = require("eslint-config-braintree");
+
+module.exports = braintreeConfig;
+```
+
+**browserify**
+
+```javascript
+const braintreeClientConfig = require("eslint-config-braintree/client");
+
+module.exports = braintreeClientConfig;
+```
+
+**node**
+
+```javascript
+const braintreeServerConfig = require("eslint-config-braintree/server");
+
+module.exports = braintreeServerConfig;
+```
+
+**browserify + es6**
+
+```javascript
+const braintreeClientConfig = require("eslint-config-braintree/client");
+const braintreeEs6Config = require("eslint-config-braintree/es6");
+
+module.exports = [...braintreeClientConfig, ...braintreeEs6Config];
+```
+
+### Legacy Configuration (.eslintrc - ESLint v8 and below)
+
 In your project's `.eslintrc.*`:
 
-### yaml
+#### yaml
 
 **default**
 
@@ -62,7 +101,7 @@ extends:
   - braintree/es6
 ```
 
-### json
+#### json
 
 **default**
 
@@ -95,6 +134,44 @@ extends:
   "extends": ["braintree/client", "braintree/es6"]
 }
 ```
+
+## Customizing Rules
+
+### Flat Config (ESLint v9+)
+
+You can extend and override rules by adding additional configuration objects to the array:
+
+```javascript
+const braintreeConfig = require("eslint-config-braintree");
+
+module.exports = [
+  ...braintreeConfig,
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    rules: {
+      "no-new-object": "warn", // Change from error to warn
+    },
+  },
+];
+```
+
+For different file patterns:
+
+```javascript
+const braintreeConfig = require("eslint-config-braintree");
+
+module.exports = [
+  ...braintreeConfig,
+  {
+    files: ["**/*.js"],
+    rules: {
+      "no-multi-spaces": ["error", { ignoreEOLComments: false }],
+    },
+  },
+];
+```
+
+### Legacy Configuration
 
 You can specify a `.eslintrc` for a subdirectory to change the rules
 that are enforced. For instance, in a node project you could extend from

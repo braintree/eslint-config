@@ -1,8 +1,18 @@
-export = {
-  env: {
-    node: true,
+import type { Linter } from "eslint";
+import { nodeGlobals } from "./globals";
+
+const config: Linter.Config[] = [
+  {
+    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+    languageOptions: {
+      globals: {
+        ...nodeGlobals,
+      },
+    },
+    rules: {
+      "no-path-concat": "error",
+    },
   },
-  rules: {
-    "no-path-concat": 2,
-  },
-};
+];
+
+export default config;

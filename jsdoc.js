@@ -1,1 +1,1 @@
-module.exports = require("./dist/jsdoc");
+module.exports = require("./dist/jsdoc").default;

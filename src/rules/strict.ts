@@ -1,5 +1,5 @@
-export = {
-  rules: {
-    strict: [2, "global"],
-  },
+const rules = {
+  strict: ["error", "global"],
 };
+
+export default { rules };

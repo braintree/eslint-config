@@ -1,16 +1,23 @@
-export = {
-  rules: {
-    "require-jsdoc": 2,
-    "valid-jsdoc": [
-      2,
-      {
-        prefer: {
-          return: "returns",
+import type { Linter } from "eslint";
+
+const config: Linter.Config[] = [
+  {
+    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+    rules: {
+      "require-jsdoc": "error",
+      "valid-jsdoc": [
+        "error",
+        {
+          prefer: {
+            return: "returns",
+          },
+          requireReturn: false,
+          requireParamDescription: true,
+          requireReturnDescription: true,
         },
-        requireReturn: false,
-        requireParamDescription: true,
-        requireReturnDescription: true,
-      },
-    ],
+      ],
+    },
   },
-};
+];
+
+export default config;
