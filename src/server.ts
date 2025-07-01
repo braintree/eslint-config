@@ -1,5 +1,5 @@
 import type { Linter } from "eslint";
-import { nodeGlobals } from "./globals";
+import globals from "globals";
 import baseConfig from "./index";
 
 const config: Linter.Config[] = [
@@ -8,7 +8,7 @@ const config: Linter.Config[] = [
     files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
     languageOptions: {
       globals: {
-        ...nodeGlobals,
+        ...globals.node,
       },
     },
     rules: {

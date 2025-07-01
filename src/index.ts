@@ -1,46 +1,37 @@
 import type { Linter } from "eslint";
 import globals from "globals";
+import prettier from "eslint-plugin-prettier";
+import prettierConfig from "eslint-config-prettier";
+import tseslint from "typescript-eslint";
+
 import bestPracticesRules from "./rules/best-practices";
 import errorsRules from "./rules/errors";
 import strictRules from "./rules/strict";
 import variablesRules from "./rules/variables";
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import typescriptParser from "@typescript-eslint/parser";
-import prettier from "eslint-plugin-prettier";
-import prettierConfig from "eslint-config-prettier";
-
-const baseTypeScriptConfig = {
-  languageOptions: {
-    parser: typescriptParser,
-    parserOptions: {
-      ecmaVersion: "latest" as const,
-      projectService: true,
-      tsconfigRootDir: __dirname,
-    },
-  },
-  plugins: {
-    "@typescript-eslint": typescriptEslint as any,
-    prettier,
-  },
-} as const;
 
 const sharedRules = {
   ...bestPracticesRules.rules,
   ...errorsRules.rules,
   ...strictRules.rules,
   ...variablesRules.rules,
-  ...typescriptEslint.configs.recommended.rules,
   ...prettierConfig.rules,
   "prettier/prettier": "error",
 };
 
-const config: Linter.Config[] = [
+const typeScriptConfig = tseslint.config(
+  ...tseslint.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
-    ...baseTypeScriptConfig,
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: 2022,
+      },
+    },
+    plugins: {
+      prettier,
+    },
     rules: sharedRules as any,
   },
-  // Test files configuration with relaxed rules
   {
     files: [
       "**/__mocks__/**/*.ts",
@@ -50,16 +41,13 @@ const config: Linter.Config[] = [
       "**/test/**/*.ts",
       "**/tests/**/*.ts",
     ],
-    ...baseTypeScriptConfig,
     languageOptions: {
-      ...baseTypeScriptConfig.languageOptions,
       globals: {
         ...globals.jest,
         ...globals.es2020,
       },
     },
     rules: {
-      ...sharedRules,
       // Relax some rules for test files
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-non-null-assertion": "off",
@@ -67,38 +55,59 @@ const config: Linter.Config[] = [
       "max-lines-per-function": "off",
     } as any,
   },
-  // Node.js configuration and build files
   {
     files: [
-      "webpack.config.js",
-      "*.config.js",
-      "*.config.ts",
       "webpack.config.ts",
       "vite.config.ts",
-      "rollup.config.js",
       "rollup.config.ts",
-      "esbuild.config.js",
       "esbuild.config.ts",
+      "*.config.ts",
     ],
-    ...baseTypeScriptConfig,
     languageOptions: {
-      ...baseTypeScriptConfig.languageOptions,
       globals: {
         ...globals.node,
       },
     },
     rules: {
-      ...sharedRules,
       "no-path-concat": "error",
       "@typescript-eslint/no-var-requires": "off",
       "@typescript-eslint/no-require-imports": "off",
-      "import/no-default-export": "off",
+    } as any,
+  }
+);
+
+const config: Linter.Config[] = [
+  ...(typeScriptConfig as Linter.Config[]),
+  {
+    files: [
+      "webpack.config.js",
+      "*.config.js",
+      "rollup.config.js",
+      "esbuild.config.js",
+    ],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: {
+        ...globals.node,
+      },
+    },
+    plugins: {
+      prettier,
+    },
+    rules: {
+      ...bestPracticesRules.rules,
+      ...errorsRules.rules,
+      ...variablesRules.rules,
+      ...prettierConfig.rules,
+      "prettier/prettier": "error",
+      "no-path-concat": "error",
+      strict: "off",
     } as any,
   },
-
-  // JavaScript files (for backward compatibility)
   {
     files: ["**/*.js", "**/*.jsx"],
+    ignores: ["**/__tests__/**/*.js", "**/*.spec.js", "test/**/*.js"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",

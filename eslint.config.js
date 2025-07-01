@@ -1,5 +1,5 @@
 const { default: config } = require("./dist/index.js");
-const { nodeGlobals } = require("./dist/globals.js");
+const globals = require("globals");
 
 module.exports = [
   {
@@ -9,7 +9,7 @@ module.exports = [
     files: ["**/*.js"],
     languageOptions: {
       globals: {
-        ...nodeGlobals,
+        ...globals.node,
       },
     },
   },

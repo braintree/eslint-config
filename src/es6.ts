@@ -1,5 +1,5 @@
 import type { Linter } from "eslint";
-import { es6Globals } from "./globals";
+import globals from "globals";
 
 const config: Linter.Config[] = [
   {
@@ -10,7 +10,7 @@ const config: Linter.Config[] = [
         sourceType: "module",
       },
       globals: {
-        ...es6Globals,
+        ...globals.es2015,
       },
     },
   },

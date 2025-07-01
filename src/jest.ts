@@ -1,5 +1,5 @@
 import type { Linter } from "eslint";
-import { jestGlobals, es2020Globals } from "./globals";
+import globals from "globals";
 
 const config: Linter.Config[] = [
   {
@@ -10,6 +10,12 @@ const config: Linter.Config[] = [
       "**/*.test.js",
       "**/*.spec.ts",
       "**/*.spec.js",
+      "test/**/*.ts",
+      "test/**/*.js",
+      "**/__mocks__/**/*.ts",
+      "**/__mocks__/**/*.js",
+      "__mocks__/**/*.ts",
+      "__mocks__/**/*.js",
     ],
     languageOptions: {
       parserOptions: {
@@ -17,10 +23,14 @@ const config: Linter.Config[] = [
         sourceType: "module",
       },
       globals: {
-        ...jestGlobals,
-        ...es2020Globals,
+        ...globals.jest,
+        ...globals.es2020,
       },
     },
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
+      "@typescript-eslint/no-var-requires": "off",
+    } as any,
   },
 ];
 

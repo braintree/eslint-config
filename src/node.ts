@@ -1,12 +1,12 @@
 import type { Linter } from "eslint";
-import { nodeGlobals } from "./globals";
+import globals from "globals";
 
 const config: Linter.Config[] = [
   {
     files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
     languageOptions: {
       globals: {
-        ...nodeGlobals,
+        ...globals.node,
       },
     },
     rules: {

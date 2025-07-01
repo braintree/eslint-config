@@ -195,14 +195,14 @@ error:
 ---
 extends: braintree/server
 rules:
-  no-new-object: 1
+  no-new-object: warn
 ```
 
 ```json
 {
   "extends": "braintree/server",
   "rules": {
-    "no-new-object": 1
+    "no-new-object": "warn"
   }
 }
 ```
@@ -215,7 +215,7 @@ In another example, to allow end of line comments, you'd override the
 extends: braintree/server
 rules:
   no-multi-spaces:
-    - 2
+    - error
     - ignoreEOLComments: false
 ```
 
@@ -223,7 +223,7 @@ rules:
 {
   "extends": "braintree/server",
   "rules": {
-    "no-multi-spaces": [2, { "ignoreEOLComments": false }]
+    "no-multi-spaces": ["error", { "ignoreEOLComments": false }]
   }
 }
 ```
