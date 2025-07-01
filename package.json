@@ -3,8 +3,7 @@
   "version": "6.0.1",
   "description": "Braintree's ESLint configuration",
   "files": [
-    "dist/",
-    "*.js"
+    "dist/"
   ],
   "scripts": {
     "prepublishOnly": "npm run build",
@@ -17,6 +16,36 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "default": "./dist/server.js"
+    },
+    "./es6": {
+      "types": "./dist/es6.d.ts",
+      "default": "./dist/es6.js"
+    },
+    "./jest": {
+      "types": "./dist/jest.d.ts",
+      "default": "./dist/jest.js"
+    },
+    "./jsdoc": {
+      "types": "./dist/jsdoc.d.ts",
+      "default": "./dist/jsdoc.js"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "default": "./dist/node.js"
+    }
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
