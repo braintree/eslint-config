@@ -32,7 +32,7 @@ npm i --save-dev @typescript-eslint/eslint-plugin eslint-plugin-prettier
 
 In your project's `eslint.config.js`:
 
-**default**
+#### Default (Flat Config)
 
 ```javascript
 const braintreeConfig = require("eslint-config-braintree");
@@ -40,7 +40,7 @@ const braintreeConfig = require("eslint-config-braintree");
 module.exports = braintreeConfig;
 ```
 
-**browserify**
+#### Browserify
 
 ```javascript
 const braintreeClientConfig = require("eslint-config-braintree/client");
@@ -48,7 +48,7 @@ const braintreeClientConfig = require("eslint-config-braintree/client");
 module.exports = braintreeClientConfig;
 ```
 
-**node**
+#### Node
 
 ```javascript
 const braintreeServerConfig = require("eslint-config-braintree/server");
@@ -56,7 +56,7 @@ const braintreeServerConfig = require("eslint-config-braintree/server");
 module.exports = braintreeServerConfig;
 ```
 
-**browserify + es6**
+#### Browserify + ES6
 
 ```javascript
 const braintreeClientConfig = require("eslint-config-braintree/client");
@@ -71,28 +71,28 @@ In your project's `.eslintrc.*`:
 
 #### yaml
 
-**default**
+##### Default (yaml)
 
 ```yaml
 ---
 extends: braintree
 ```
 
-**browserify**
+##### Browserify (yaml)
 
 ```yaml
 ---
 extends: braintree/client
 ```
 
-**node**
+##### Node (yaml)
 
 ```yaml
 ---
 extends: braintree/server
 ```
 
-**browserify + es6**
+##### Browserify + ES6 (yaml)
 
 ```yaml
 ---
@@ -103,7 +103,7 @@ extends:
 
 #### json
 
-**default**
+##### Default (json)
 
 ```json
 {
@@ -111,7 +111,7 @@ extends:
 }
 ```
 
-**browserify**
+##### Browserify (json)
 
 ```json
 {
@@ -119,7 +119,7 @@ extends:
 }
 ```
 
-**node**
+##### Node (json)
 
 ```json
 {
@@ -127,7 +127,7 @@ extends:
 }
 ```
 
-**browserify + es6**
+##### Browserify + ES6 (json)
 
 ```json
 {
