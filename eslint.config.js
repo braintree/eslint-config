@@ -3,11 +3,10 @@ const { nodeGlobals } = require("./dist/globals.js");
 
 module.exports = [
   {
-    ignores: ["dist/**"],
+    ignores: ["dist/**", "src/**"],
   },
-  ...config,
   {
-    files: ["**/*.js", "**/*.ts"],
+    files: ["**/*.js"],
     languageOptions: {
       globals: {
         ...nodeGlobals,
