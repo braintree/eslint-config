@@ -1,11 +1,20 @@
-export = {
-  rules: {
-    "no-catch-shadow": 2,
-    "no-delete-var": 2,
-    "no-label-var": 2,
-    "no-shadow-restricted-names": 2,
-    "no-undef-init": 2,
-    "no-undef": 2,
-    "no-undefined": 2,
-  },
+const rules = {
+  "no-delete-var": "error",
+  "no-label-var": "error",
+  "no-restricted-globals": ["error", "event", "fdescribe"],
+  "no-shadow-restricted-names": "error",
+  "no-undef-init": "error",
+  "no-undef": "error",
+  "no-unused-vars": [
+    "error",
+    {
+      vars: "all",
+      args: "after-used",
+      ignoreRestSiblings: true,
+      argsIgnorePattern: "^_",
+      varsIgnorePattern: "^_",
+    },
+  ],
 };
+
+export default { rules };

@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## UNRELEASED
+
+_Breaking Changes_
+
+- Update Node to v22
+- Updating ESLint and migrating to the flat config
+- Adding in additional rules
+
 ## 6.0.1
 
 - Update (sub-)dependencies

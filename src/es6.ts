@@ -1,9 +1,19 @@
-export = {
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: "module",
+import type { Linter } from "eslint";
+import globals from "globals";
+
+const config: Linter.Config[] = [
+  {
+    files: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: 6,
+        sourceType: "module",
+      },
+      globals: {
+        ...globals.es2015,
+      },
+    },
   },
-  env: {
-    es6: true,
-  },
-};
+];
+
+export default config;

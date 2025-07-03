@@ -3,8 +3,7 @@
   "version": "6.0.1",
   "description": "Braintree's ESLint configuration",
   "files": [
-    "dist/",
-    "*.js"
+    "dist/"
   ],
   "scripts": {
     "prepublishOnly": "npm run build",
@@ -17,31 +16,61 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "default": "./dist/server.js"
+    },
+    "./es6": {
+      "types": "./dist/es6.d.ts",
+      "default": "./dist/es6.js"
+    },
+    "./jest": {
+      "types": "./dist/jest.d.ts",
+      "default": "./dist/jest.js"
+    },
+    "./jsdoc": {
+      "types": "./dist/jsdoc.d.ts",
+      "default": "./dist/jsdoc.js"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "default": "./dist/node.js"
+    }
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/braintree/eslint-config.git"
   },
   "peerDependencies": {
-    "eslint": "^8.1.0"
+    "eslint": "^9.30.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.4",
-    "eslint": "^8.47.0",
+    "eslint": "^9.30.0",
     "jest": "^29.6.3",
-    "prettier": "^3.0.2",
+    "prettier": "^3.6.2",
     "ts-jest": "^29.1.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.8.3"
   },
   "bugs": {
     "url": "https://github.com/braintree/eslint-config/issues"
   },
   "homepage": "https://github.com/braintree/eslint-config#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0"
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "globals": "^16.3.0",
+    "typescript-eslint": "^8.35.1"
   },
   "author": "",
   "jest": {
