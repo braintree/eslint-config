@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## UNRELEASED
+## 7.0.0
 
 _Breaking Changes_
 
