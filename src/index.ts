@@ -1,6 +1,7 @@
 import type { Linter } from "eslint";
 import globals from "globals";
 import prettier from "eslint-plugin-prettier";
+import imp from "eslint-plugin-import";
 import prettierConfig from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
 
@@ -8,6 +9,7 @@ import bestPracticesRules from "./rules/best-practices";
 import errorsRules from "./rules/errors";
 import strictRules from "./rules/strict";
 import variablesRules from "./rules/variables";
+import esModules from "./rules/es-modules";
 
 const sharedRules = {
   ...bestPracticesRules.rules,
@@ -15,6 +17,7 @@ const sharedRules = {
   ...strictRules.rules,
   ...variablesRules.rules,
   ...prettierConfig.rules,
+  ...esModules.rules,
   "prettier/prettier": "error",
 };
 
@@ -28,6 +31,7 @@ const typeScriptConfig = tseslint.config(
       },
     },
     plugins: {
+      imp,
       prettier,
     },
     rules: sharedRules as any,
@@ -73,7 +77,7 @@ const typeScriptConfig = tseslint.config(
       "@typescript-eslint/no-var-requires": "off",
       "@typescript-eslint/no-require-imports": "off",
     } as any,
-  }
+  },
 );
 
 const config: Linter.Config[] = [
@@ -123,6 +127,7 @@ const config: Linter.Config[] = [
       },
     },
     plugins: {
+      imp,
       prettier,
     },
     rules: {
@@ -130,6 +135,7 @@ const config: Linter.Config[] = [
       ...errorsRules.rules,
       ...variablesRules.rules,
       ...prettierConfig.rules,
+      ...esModules.rules,
       "prettier/prettier": "error",
       // Disable TypeScript-specific rules for JS files
       strict: "off",

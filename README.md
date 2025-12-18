@@ -2,10 +2,10 @@
 
 Shared linting configuration for braintree js projects.
 
-- [index.js](./index.js): shared configuration
-- [client.js](./client.js): client side configuration
-- [server.js](./server.js): server side configuration
-- [jsdoc.js](./jsdoc.js): jsdoc configuration
+- [index.ts](./src/index.ts): shared configuration
+- [client.ts](./src/client.ts): client side configuration
+- [server.ts](./src/server.ts): server side configuration
+- [jsdoc.ts](./src/jsdoc.ts): jsdoc configuration
 
 ## Consuming
 
@@ -21,11 +21,11 @@ Install the ESLint config
 npm i --save-dev eslint-config-braintree
 ```
 
-Eslint requires all the plugins that the configu uses to be installed at
+Eslint requires all the plugins that the config uses to be installed at
 the root of the project as well.
 
 ```bash
-npm i --save-dev @typescript-eslint/eslint-plugin eslint-plugin-prettier
+npm i --save-dev @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-plugin-import
 ```
 
 ### ESLint Flat Config (v9+)
