@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## UNRELEASED
+
+- Update dev dependencies
+  - @types/jest to 30.0.0
+  - jest to 30.2.0
+  - prettier to 3.7.4
+  - ts-jest to 29.4.6
+  - typescript to 5.9.3
+- Update dependencies
+  - eslint-plugin-prettier" to 5.5.4
+  - globals" to 16.5.0
+  - typescript-eslint" to 8.50.1
+- Update Node to v24
+
 ## 7.0.0
 
 _Breaking Changes_

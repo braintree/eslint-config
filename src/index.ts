@@ -73,7 +73,7 @@ const typeScriptConfig = tseslint.config(
       "@typescript-eslint/no-var-requires": "off",
       "@typescript-eslint/no-require-imports": "off",
     } as any,
-  }
+  },
 );
 
 const config: Linter.Config[] = [
