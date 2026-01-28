@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## UNRELEASED
+## 7.0.1
 
 - Update dev dependencies
   - @types/jest to 30.0.0
@@ -16,11 +16,10 @@
 
 ## 7.0.0
 
-_Breaking Changes_
-
-- Update Node to v22
-- Updating ESLint and migrating to the flat config
-- Adding in additional rules
+- Breaking Changes
+  - Update Node to v22
+  - Updating ESLint and migrating to the flat config
+  - Adding in additional rules
 
 ## 6.0.1
 
@@ -40,21 +39,19 @@ _Breaking Changes_
   - eslint-plugin-prettier to v4
   - prettier to v3
 
-_Breaking Changes_
-
-- Update Node to v18
-- Add jest config to `__tests__` directories automatically
-- Require eslint@^8.1.0
-- Use prettier for style rules
-- Use typescript for syntax rules
-- Require @typescript-eslint/eslint-plugin@^5.2.0 as a peer dependency
-- Require eslint-plugin-prettier@^4.0.0 as a peer dependency
+- Breaking Changes
+  - Update Node to v18
+  - Add jest config to `__tests__` directories automatically
+  - Require eslint@^8.1.0
+  - Use prettier for style rules
+  - Use typescript for syntax rules
+  - Require @typescript-eslint/eslint-plugin@^5.2.0 as a peer dependency
+  - Require eslint-plugin-prettier@^4.0.0 as a peer dependency
 
 ## 4.0.0
 
-_Breaking Changes_
-
-- Update peer dependencies to require eslint@6
+- Breaking Changes
+  - Update peer dependencies to require eslint@6
 
 ## 3.0.1
 
@@ -62,9 +59,8 @@ _Breaking Changes_
 
 ## 3.0.0
 
-_Breaking Changes_
-
-- Update peer dependencies to require eslint@5
+- Breaking Changes
+  - Update peer dependencies to require eslint@5
 
 ## 2.0.0
 
