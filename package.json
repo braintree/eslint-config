@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-braintree",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Braintree's ESLint configuration",
   "files": [
     "dist/"
