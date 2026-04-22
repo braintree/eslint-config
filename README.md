@@ -21,11 +21,25 @@ Install the ESLint config
 npm i --save-dev eslint-config-braintree
 ```
 
-Eslint requires all the plugins that the configu uses to be installed at
+Eslint requires all the plugins that the config uses to be installed at
 the root of the project as well.
 
 ```bash
 npm i --save-dev @typescript-eslint/eslint-plugin eslint-plugin-prettier
+```
+
+## Development
+
+Clone this repo, then install the project's development dependencies:
+
+```bash
+npm install
+```
+
+Run unit tests via the command:
+
+```bash
+npm run test
 ```
 
 ### ESLint Flat Config (v9+)

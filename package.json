@@ -12,7 +12,9 @@
     "prelint": "npm run build",
     "lint": "eslint --ext .js,.ts .",
     "posttest": "npm run lint",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky",
+    "commit": "cz"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -55,8 +57,13 @@
     "eslint": "^9.30.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
     "@types/jest": "^30.0.0",
+    "commitizen": "^4.3.1",
+    "cz-customizable": "^7.5.4",
     "eslint": "^9.30.0",
+    "husky": "^9.1.7",
     "jest": "^30.2.0",
     "prettier": "^3.7.4",
     "ts-jest": "^29.4.6",
@@ -76,5 +83,10 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
